@@ -2,7 +2,6 @@
 
 ## Archivos esperados
 
-<img width="482" height="432" alt="image" src="https://github.com/user-attachments/assets/cdd96101-9721-4bec-9137-48cbd6f0d853" />
 
 2. <img width="520" height="292" alt="02-interfaces-fortigate" src="https://github.com/user-attachments/assets/0cb616e5-be65-425f-8629-7434c66f849a" />
 
