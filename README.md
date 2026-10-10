@@ -47,7 +47,8 @@ Objetivos:
 
 ## Topología
 
-![Topología en PNETLab](docs/images/01-topologia-pnetlab.jpg)
+<img width="520" height="286" alt="01-topologia-pnetlab" src="https://github.com/user-attachments/assets/deb74fdc-398d-4d2e-9a77-6aa36dd0816f" />
+
 
 ### Diagrama lógico
 
@@ -108,7 +109,8 @@ Toda la configuración se realizó desde la GUI del FortiGate (FortiOS 7.0.3). E
 
 ### Interfaces y DHCP
 
-![Interfaces del FortiGate](docs/images/02-interfaces-fortigate.jpg)
+<img width="520" height="292" alt="02-interfaces-fortigate" src="https://github.com/user-attachments/assets/27ab516f-2957-4b92-b7d4-140c6e2a2b77" />
+
 
 - `port2` no tiene IP y transporta las subinterfaces VLAN.
 - `VLAN10`: `10.7.84.1/255.255.255.128` con servidor DHCP.
@@ -117,17 +119,21 @@ Toda la configuración se realizó desde la GUI del FortiGate (FortiOS 7.0.3). E
 
 ### DNS
 
-![DNS del FortiGate](docs/images/03-dns-fortigate.jpg)
+<img width="520" height="292" alt="03-dns-fortigate" src="https://github.com/user-attachments/assets/e485776f-84dc-4400-a506-e154d7b8723e" />
 
-![Servicio DNS por interfaz](docs/images/04-dns-servers.jpg)
+
+<img width="520" height="292" alt="04-dns-servers" src="https://github.com/user-attachments/assets/9d5fc9cf-0970-43aa-8768-8c448cfda29d" />
+
 
 El FortiGate actúa como servidor DNS recursivo en `VLAN10`, `Vlan20` y `port3`. Los servidores de la DMZ resuelven nombres a través de `10.7.84.129`, por lo que no necesitan una política de DNS hacia Internet.
 
 ### Objetos de direcciones
 
-![Objetos de direcciones](docs/images/05-objetos-direcciones.jpg)
+<img width="520" height="292" alt="05-objetos-direcciones" src="https://github.com/user-attachments/assets/840df715-f951-4c9a-9e23-0f7eafdb3e15" />
 
-![Grupos de direcciones](docs/images/06-grupos-direcciones.jpg)
+
+![Grupos de direcciones]<img width="520" height="292" alt="06-grupos-direcciones" src="https://github.com/user-attachments/assets/3e4dde5f-2484-4a59-b062-8369e9ef1dec" />
+
 
 | Objeto | Valor |
 |---|---|
@@ -140,7 +146,8 @@ El FortiGate actúa como servidor DNS recursivo en `VLAN10`, `Vlan20` y `port3`.
 
 ### Perfil Web Filter
 
-![Perfiles Web Filter](docs/images/07-webfilter-perfil.jpg)
+<img width="520" height="292" alt="07-webfilter-perfil" src="https://github.com/user-attachments/assets/e893eb34-3812-4a7e-a2ca-343ac9762807" />
+
 
 El perfil `WF_BLOQUEO_INVENTARIO` bloquea la URL del Sistema de Inventario (`10.7.84.130`) y se aplica en la política `V10-INV-HTTP-BLOQUEO`. El mensaje de reemplazo configurado en System > Replacement Messages > Web Filter es:
 
@@ -160,7 +167,8 @@ sequenceDiagram
 
 ### Políticas de firewall
 
-![Políticas de firewall](docs/images/08-politicas-firewall.jpg)
+<img width="520" height="292" alt="08-politicas-firewall" src="https://github.com/user-attachments/assets/e2f55254-c9ac-49a2-9d2c-b79369bb5caa" />
+
 
 | # | Nombre | Origen > Destino (interfaces) | Origen > Destino (objetos) | Servicio | Acción | NAT |
 |---|---|---|---|---|---|---|
@@ -219,11 +227,14 @@ Los archivos completos están en [configs/switches](configs/switches).
 - Puertos sin uso en VLAN 999 y apagados.
 - Spanning Tree rápido (`rapid-pvst`) con BPDU Guard por defecto.
 
-![Configuración de SW3 - parte 1](docs/images/09-sw3-config-parte1.jpg)
+<img width="520" height="292" alt="09-sw3-config-parte1" src="https://github.com/user-attachments/assets/a453287d-16af-4fad-93bd-e1af84411780" />
 
-![Configuración de SW3 - puertos](docs/images/10-sw3-config-puertos.jpg)
 
-![Configuración de SW3 - final](docs/images/11-sw3-config-final.jpg)
+<img width="520" height="292" alt="10-sw3-config-puertos" src="https://github.com/user-attachments/assets/23416928-3ac2-4447-b452-2bb398b76421" />
+
+
+<img width="520" height="292" alt="11-sw3-config-final" src="https://github.com/user-attachments/assets/0868e798-24a9-45d7-a59b-716fbf5c8686" />
+
 
 ## Servidores
 
@@ -264,11 +275,13 @@ PC VLAN 20:  inet 25.7.84.x/25   gateway 25.7.84.1
 
 ### 2. SSH desde la VLAN 20 (permitido)
 
-![SSH exitoso desde la VLAN 20](docs/images/12-ssh-vlan20-exitoso.jpg)
+<img width="520" height="292" alt="12-ssh-vlan20-exitoso" src="https://github.com/user-attachments/assets/d65b466e-1182-475a-8f34-48b7ee3eff7e" />
+
 
 ### 3. SSH desde la VLAN 10 (denegado)
 
-![SSH fallido desde la VLAN 10](docs/images/13-ssh-vlan10-fallido.jpg)
+<img width="520" height="292" alt="13-ssh-vlan10-fallido" src="https://github.com/user-attachments/assets/eb150ef9-a2c1-44cf-9a58-f59103b35e02" />
+
 
 ### 4. Sistema de Inventario desde la VLAN 10 (bloqueado)
 
@@ -305,7 +318,8 @@ La política `DMZ-A-LAN-DENY` descarta el tráfico iniciado desde la DMZ hacia l
 
 ### 8. Endpoints de actualización permitidos
 
-![curl a archive.ubuntu.com desde la DMZ](docs/images/14-dmz-actualizaciones-ok.jpg)
+<img width="520" height="292" alt="14-dmz-actualizaciones-ok" src="https://github.com/user-attachments/assets/0c90bf50-5cd4-4db5-9271-ebc88f5dd88e" />
+
 
 ### 9. Internet no permitido desde la DMZ
 
