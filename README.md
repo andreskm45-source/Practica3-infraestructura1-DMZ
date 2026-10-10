@@ -365,6 +365,20 @@ Practica3-infraestructura1-DMZ/
     ├── diagramas/
     │   └── topologia.svg
     └── images/
+        ├── 01-topologia-pnetlab.jpg
+        ├── 02-interfaces-fortigate.jpg
+        ├── 03-dns-fortigate.jpg
+        ├── 04-dns-servers.jpg
+        ├── 05-objetos-direcciones.jpg
+        ├── 06-grupos-direcciones.jpg
+        ├── 07-webfilter-perfil.jpg
+        ├── 08-politicas-firewall.jpg
+        ├── 09-sw3-config-parte1.jpg
+        ├── 10-sw3-config-puertos.jpg
+        ├── 11-sw3-config-final.jpg
+        ├── 12-ssh-vlan20-exitoso.jpg
+        ├── 13-ssh-vlan10-fallido.jpg
+        └── 14-dmz-actualizaciones-ok.jpg
 ```
 
 ## Reproducción del laboratorio
