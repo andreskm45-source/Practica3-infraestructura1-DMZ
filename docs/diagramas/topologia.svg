@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<style>text{font-family:Arial,sans-serif;fill:#111}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}.fw{fill:#fff1e6;stroke:#d35400;stroke-width:3}.sw{fill:#eaf2f8;stroke:#2874a6;stroke-width:2}.srv{fill:#eafaf1;stroke:#239b56;stroke-width:2}.pc{fill:#f4ecf7;stroke:#7d3c98;stroke-width:2}.line{stroke:#555;stroke-width:3;fill:none}</style>
+<rect x="470" y="40" width="260" height="70" rx="12" class="box"/><text x="600" y="70" text-anchor="middle" font-size="22" font-weight="bold">Internet / ISP</text><text x="600" y="95" text-anchor="middle" font-size="16">192.168.20.0/24</text>
+<rect x="430" y="160" width="340" height="105" rx="12" class="fw"/><text x="600" y="190" text-anchor="middle" font-size="24" font-weight="bold">FortiGate Forti1</text><text x="600" y="218" text-anchor="middle" font-size="16">port1: 192.168.20.154/24</text><text x="600" y="240" text-anchor="middle" font-size="16">port2: VLAN 10/20 · port3: 10.7.84.129/28</text>
+<path d="M600 110 L600 160" class="line"/>
+<rect x="170" y="335" width="260" height="80" rx="12" class="sw"/><text x="300" y="365" text-anchor="middle" font-size="22" font-weight="bold">SW2 - Usuarios</text><text x="300" y="392" text-anchor="middle" font-size="16">Trunk VLAN 10 y 20</text>
+<rect x="770" y="335" width="260" height="80" rx="12" class="sw"/><text x="900" y="365" text-anchor="middle" font-size="22" font-weight="bold">SW3 - DMZ</text><text x="900" y="392" text-anchor="middle" font-size="16">VLAN 30</text>
+<path d="M500 265 L300 335" class="line"/><path d="M700 265 L900 335" class="line"/>
+<rect x="70" y="510" width="220" height="85" rx="12" class="pc"/><text x="180" y="540" text-anchor="middle" font-size="20" font-weight="bold">Linux2</text><text x="180" y="566" text-anchor="middle" font-size="16">VLAN 10 · 10.7.84.0/25</text>
+<rect x="330" y="510" width="220" height="85" rx="12" class="pc"/><text x="440" y="540" text-anchor="middle" font-size="20" font-weight="bold">Linux</text><text x="440" y="566" text-anchor="middle" font-size="16">VLAN 20 · 25.7.84.0/25</text>
+<path d="M260 415 L180 510" class="line"/><path d="M340 415 L440 510" class="line"/>
+<rect x="650" y="510" width="160" height="90" rx="12" class="srv"/><text x="730" y="540" text-anchor="middle" font-size="19" font-weight="bold">Database</text><text x="730" y="568" text-anchor="middle" font-size="15">10.7.84.132</text>
+<rect x="830" y="510" width="160" height="90" rx="12" class="srv"/><text x="910" y="540" text-anchor="middle" font-size="19" font-weight="bold">Inventario</text><text x="910" y="568" text-anchor="middle" font-size="15">10.7.84.130</text>
+<rect x="1010" y="510" width="160" height="90" rx="12" class="srv"/><text x="1090" y="540" text-anchor="middle" font-size="19" font-weight="bold">Caja</text><text x="1090" y="568" text-anchor="middle" font-size="15">10.7.84.131</text>
+<path d="M860 415 L730 510" class="line"/><path d="M900 415 L910 510" class="line"/><path d="M940 415 L1090 510" class="line"/>
+<text x="600" y="660" text-anchor="middle" font-size="18">Práctica 3 · Infraestructura 1 · DMZ segura con FortiGate</text>
+</svg>
