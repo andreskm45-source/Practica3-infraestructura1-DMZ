@@ -1,0 +1,61 @@
+hostname SW2
+!
+no ip domain-lookup
+ip dhcp snooping vlan 10,20
+no ip dhcp snooping information option
+ip dhcp snooping
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+!
+vlan 10
+ name USUARIOS_V10
+!
+vlan 20
+ name USUARIOS_V20
+!
+vlan 999
+ name BLACKHOLE
+!
+interface Ethernet0/0
+ description TRUNK_FORTIGATE_PORT2
+ switchport trunk allowed vlan 10,20
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 999
+ switchport mode trunk
+ ip dhcp snooping trust
+!
+interface Ethernet0/1
+ description LINUX2_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ switchport port-security
+ spanning-tree portfast
+ ip dhcp snooping limit rate 15
+!
+interface Ethernet0/2
+ description LINUX_VLAN20
+ switchport access vlan 20
+ switchport mode access
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ switchport port-security
+ spanning-tree portfast
+ ip dhcp snooping limit rate 15
+!
+interface Ethernet0/3
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface range Ethernet1/0 - 3
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+line con 0
+ logging synchronous
+end
